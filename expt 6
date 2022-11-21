@@ -1,0 +1,69 @@
+//expt 6a
+
+//Program to remove specific element from Array Object
+
+function remove_array_element(array, n)
+ {
+   var index = array.indexOf(n);
+   if (index > -1) {
+    array.splice(index, 1);
+}
+   return array;
+ }
+
+console.log(remove_array_element([2, 5, 9, 6], 5));
+
+//program to remove specific item from an array: Using For Loop
+
+function removeItemFromArray(array, n) {
+    const newArray = [];
+
+    for ( let i = 0; i < array.length; i++) {
+        if(array[i] !== n) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+
+const result = removeItemFromArray([1, 2, 3 , 4 , 5], 2);
+
+console.log(result);
+
+
+
+
+
+//expt 6b
+// Exp 6 b: program to check if an array contains a specified value
+
+const array = ['you', 'will', 'learn', 'javascript'];
+
+const hasValue = array.includes('javascript');
+
+// check the condition
+if(hasValue) {
+    console.log('Array contains a value.');
+} else {
+    console.log('Array does not contain a value.');
+}
+
+
+
+//expt 6c
+//Exp 6c: program to empty an array: Method 3
+
+function emptyArray3(arr3) {
+
+    // setting array length to 0
+    arr3.length = 0;
+    
+    return arr3;
+}
+
+const array3 = [7, 8 ,9];
+console.log(array3);
+
+// call the function
+const result3 = emptyArray3(array3);
+console.log(result3);
