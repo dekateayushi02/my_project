@@ -1,0 +1,104 @@
+//expt 3a
+//reverse String
+
+function reverseString(str){
+
+    let newString = "";
+
+    for (let i = str.length-1; i >= 0 ; i--){
+
+        newString += str[i];
+    }
+    return newString;
+}
+
+const string = prompt("Enter a string : ");
+
+const result = reverseString(string);
+console.log(result);
+
+//expt 3b
+//replace character in string
+
+const string=prompt("Enter a sentence : ");
+const text=prompt("Enter word you want to replace in your sentence : ");
+const newt=prompt("Enter the replacement word : ");
+const newText = string.replace(text,newt);
+
+console.log(newText);
+
+const string2= 'Mr.Red has a red house and a red car';
+
+const newText2 = string.replace('red','blue');
+
+console.log(newText2);
+
+
+//expt 3c1
+//string palindrome
+
+function check_palindrome(str) {
+
+    let j=str.length-1;
+
+    for (let i = 0; i < j/2; i++) {
+
+        let x=str[i];
+        let y=str[j-i];
+        if(x!=y)
+        {
+            return false;
+        }
+        return true;
+    }  
+}
+function is_palindrome(str) {
+
+    let ans = check_palindrome(str);
+
+    if(ans==true)
+    {
+        console.log("String is Plaindrome");
+    }
+    else
+    {
+        console.log("String is not a Plaindrome");
+    } 
+}
+const text = prompt("Enter a string : ");
+is_palindrome(text);
+
+
+
+//expt 3c2
+//number palindrome
+
+function reverse(str) {
+
+    let rev_str = "";
+
+    for (let i = str.length-1; i >= 0; i--) {
+
+        rev_str+=str[i];  
+    }
+    return rev_str; 
+}
+
+function is_palindrome(str) {
+
+    reverse_str=reverse(str);
+
+    if(reverse_str===str)
+    {
+        console.log("It is Palindrome.")
+    }
+    else
+    {
+        console.log("It is not a Palindrome.")
+    }  
+}
+
+const text = prompt("Enter a string : ");
+is_palindrome(text);
+
+
